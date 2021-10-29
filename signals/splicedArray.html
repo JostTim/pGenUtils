@@ -13,14 +13,14 @@
         <meta name="author" content="Timothe">
       
       
-        <link rel="canonical" href="https://josttim.github.io/pLabUtils/fileio/Pickle.html">
+        <link rel="canonical" href="https://josttim.github.io/pLabUtils/signals/splicedArray.html">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Pickle - pGenUtils Documentation</title>
+        <title>splicedArray - pGenUtils Documentation</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pickle
+              splicedArray
             
           </span>
         </div>
@@ -257,15 +257,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Pickle.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../fileio/Pickle.html" class="md-tabs__link">
         fileio
       </a>
     </li>
@@ -339,13 +337,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../signals/splicedArrayBuilder.html" class="md-tabs__link">
+      <a href="splicedArrayBuilder.html" class="md-tabs__link md-tabs__link--active">
         signals
       </a>
     </li>
@@ -651,14 +651,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         fileio
@@ -674,21 +672,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="Pickle.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fileio/Pickle.html" class="md-nav__link">
         Pickle
       </a>
-      
     </li>
   
 
@@ -698,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ConfigFile.html" class="md-nav__link">
+      <a href="../fileio/ConfigFile.html" class="md-nav__link">
         ConfigFile
       </a>
     </li>
@@ -710,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="paste_dir_content.html" class="md-nav__link">
+      <a href="../fileio/paste_dir_content.html" class="md-nav__link">
         paste_dir_content
       </a>
     </li>
@@ -1233,12 +1221,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
       
       <label class="md-nav__link" for="__nav_10">
         signals
@@ -1256,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signals/splicedArrayBuilder.html" class="md-nav__link">
+      <a href="splicedArrayBuilder.html" class="md-nav__link">
         splicedArrayBuilder
       </a>
     </li>
@@ -1266,11 +1256,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../signals/splicedArray.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="splicedArray.html" class="md-nav__link md-nav__link--active">
         splicedArray
       </a>
+      
     </li>
   
 
@@ -1280,7 +1280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signals/removenans.html" class="md-nav__link">
+      <a href="removenans.html" class="md-nav__link">
         removenans
       </a>
     </li>
@@ -1292,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signals/get_array_splices_infos.html" class="md-nav__link">
+      <a href="get_array_splices_infos.html" class="md-nav__link">
         get_array_splices_infos
       </a>
     </li>
@@ -1588,8 +1588,8 @@
 
 
 
-<h1 id="fileio.Pickle" class="doc doc-heading">
-        <code>Pickle</code>
+<h1 id="signals.splicedArray" class="doc doc-heading">
+        <code>splicedArray</code>
 
 
 
@@ -1597,6 +1597,34 @@
 
     <div class="doc doc-contents first">
 
+
+<p><strong>Examples:</strong></p>
+    <p>'''python</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">vanilla_numpy_array</span> <span class="o">=</span> <span class="nv">np</span>.<span class="nv">array</span><span class="ss">(</span>[<span class="nv">np</span>.<span class="nv">nan</span>,<span class="mi">1</span>,<span class="mi">2</span>,<span class="mi">3</span>,<span class="mi">3</span>,<span class="nv">np</span>.<span class="nv">nan</span>,<span class="nv">np</span>.<span class="nv">nan</span>,<span class="mi">23</span>,<span class="mi">32</span>,<span class="nv">np</span>.<span class="nv">nan</span>,<span class="mi">2212</span>,<span class="mi">2</span>,<span class="mi">2</span>,<span class="mi">332</span>]<span class="ss">)</span>
+<span class="nv">better_array</span> <span class="o">=</span> <span class="nv">splicedArray</span><span class="ss">(</span><span class="nv">test</span><span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">better_array</span><span class="ss">)</span> #<span class="nv">this</span> <span class="nv">is</span> <span class="nv">still</span> <span class="nv">a</span> <span class="nv">numpy</span> <span class="nv">array</span>...  <span class="nv">but</span> <span class="nv">boosted</span> <span class="nv">with</span> <span class="nv">special</span> <span class="nv">abilities</span> :
+<span class="nv">print</span><span class="ss">(</span><span class="nv">better_array</span>.<span class="nv">a</span><span class="ss">)</span> #<span class="nv">use</span> <span class="nv">array</span>.<span class="nv">a</span> <span class="nv">to</span> <span class="nv">get</span> <span class="nv">only</span> <span class="nv">non_nan</span> <span class="nv">values</span> <span class="nv">off</span> <span class="nv">the</span> <span class="nv">array</span>. <span class="nv">Usefull</span> <span class="nv">to</span> <span class="nv">feed</span> <span class="nv">into</span> <span class="nv">functions</span> <span class="nv">that</span> <span class="k">do</span> <span class="nv">not</span> <span class="nv">cope</span> <span class="nv">well</span> <span class="nv">with</span> <span class="nv">nans</span>.
+<span class="nv">To</span> <span class="nv">get</span> <span class="nv">back</span> <span class="nv">the</span> <span class="nv">nan</span> <span class="nv">at</span> <span class="nv">the</span> <span class="nv">places</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">original</span> <span class="nv">array</span> <span class="nv">into</span> <span class="nv">itself</span>, <span class="nv">or</span> <span class="nv">an</span> <span class="nv">array</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">shape</span> <span class="nv">where</span> <span class="nv">values</span> <span class="nv">have</span> <span class="nv">been</span> <span class="nv">transformed</span> <span class="nv">by</span> <span class="nv">any</span> <span class="nv">function</span>, <span class="nv">use</span> <span class="nv">either</span>
+
+<span class="nv">transformed_better_array</span> <span class="o">=</span> <span class="nv">better_array</span><span class="ss">(</span> <span class="nv">a_function_not_working_with_nans</span><span class="ss">(</span> <span class="nv">better_array</span>.<span class="nv">a</span> <span class="ss">)</span> <span class="ss">)</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">toast</span><span class="ss">(</span><span class="nv">toast</span>.<span class="nv">a</span><span class="ss">))</span> #<span class="nv">equivalent</span> <span class="nv">of</span> <span class="nv">doing</span> <span class="nv">that</span>.
+</code></pre></div>
+
+<p>'''</p>
+      <div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>When using the call <code>better_array(array)</code> to put back nan in place,
+if the shape has changed on one dimension, for example,
+because of a numerical derivative operation, the output array will be
+given back it's original shape, appendded at the end by as much np.nan as
+necessary.
+This can be adjusted by adding a second optionnal parameter, with value,
+<code>"start"</code>,<code>"end"</code>,or <code>"none"</code>. Default is <code>"end"</code>
+Example :
+<div class="highlight"><pre><span></span><code>    <span class="n">better_array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="s2">&quot;none&quot;</span><span class="p">)</span> <span class="c1">#will not be shape-fixed</span>
+    <span class="n">better_array</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="s2">&quot;start&quot;</span><span class="p">)</span> <span class="c1">#will not shape-fixed by addind np.nan at the start IF NECESSARY.</span>
+</code></pre></div></p>
+</div>
 
 
 
@@ -1606,8 +1634,43 @@
 
 
 
+<h2 id="signals.splicedArray-attributes">Attributes</h2>
+
+  <div class="doc doc-object doc-attribute">
 
 
+
+<h3 id="signals.splicedArray.a" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">signals</span><span class="o">.</span><span class="n">splicedArray</span><span class="o">.</span><span class="n">a</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+</h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Extracts only the non_nan values off the array.</p>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>np.array</code></td>
+      <td><p>An array with no nan inside.</p></td>
+    </tr>
+  </tbody>
+</table>    </div>
+
+  </div>
 
 
 
@@ -1645,7 +1708,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../externs/empty_df.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: empty_df" rel="prev">
+        <a href="splicedArrayBuilder.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: splicedArrayBuilder" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1654,20 +1717,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              empty_df
+              splicedArrayBuilder
             </div>
           </div>
         </a>
       
       
         
-        <a href="ConfigFile.html" class="md-footer__link md-footer__link--next" aria-label="Next: ConfigFile" rel="next">
+        <a href="removenans.html" class="md-footer__link md-footer__link--next" aria-label="Next: removenans" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              ConfigFile
+              removenans
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -13,14 +13,14 @@
         <meta name="author" content="Timothe">
       
       
-        <link rel="canonical" href="https://josttim.github.io/pLabUtils/fileio/Pickle.html">
+        <link rel="canonical" href="https://josttim.github.io/pLabUtils/workflows/singleton.html">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Pickle - pGenUtils Documentation</title>
+        <title>singleton - pGenUtils Documentation</title>
       
     
     
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pickle
+              singleton
             
           </span>
         </div>
@@ -257,15 +257,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="Pickle.html" class="md-tabs__link md-tabs__link--active">
+      <a href="../fileio/Pickle.html" class="md-tabs__link">
         fileio
       </a>
     </li>
@@ -387,13 +385,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../workflows/CachedVariables.html" class="md-tabs__link">
+      <a href="CachedVariables.html" class="md-tabs__link md-tabs__link--active">
         workflows
       </a>
     </li>
@@ -651,14 +651,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         fileio
@@ -674,21 +672,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="Pickle.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fileio/Pickle.html" class="md-nav__link">
         Pickle
       </a>
-      
     </li>
   
 
@@ -698,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ConfigFile.html" class="md-nav__link">
+      <a href="../fileio/ConfigFile.html" class="md-nav__link">
         ConfigFile
       </a>
     </li>
@@ -710,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="paste_dir_content.html" class="md-nav__link">
+      <a href="../fileio/paste_dir_content.html" class="md-nav__link">
         paste_dir_content
       </a>
     </li>
@@ -1467,12 +1455,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" checked>
       
       <label class="md-nav__link" for="__nav_13">
         workflows
@@ -1490,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/CachedVariables.html" class="md-nav__link">
+      <a href="CachedVariables.html" class="md-nav__link">
         CachedVariables
       </a>
     </li>
@@ -1502,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/get_currentfile_git_repo_metadata.html" class="md-nav__link">
+      <a href="get_currentfile_git_repo_metadata.html" class="md-nav__link">
         get_currentfile_git_repo_metadata
       </a>
     </li>
@@ -1514,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/ProgressBarImage.html" class="md-nav__link">
+      <a href="ProgressBarImage.html" class="md-nav__link">
         ProgressBarImage
       </a>
     </li>
@@ -1526,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/sizeof_fmt.html" class="md-nav__link">
+      <a href="sizeof_fmt.html" class="md-nav__link">
         sizeof_fmt
       </a>
     </li>
@@ -1536,11 +1526,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../workflows/singleton.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="singleton.html" class="md-nav__link md-nav__link--active">
         singleton
       </a>
+      
     </li>
   
 
@@ -1584,39 +1584,18 @@
                 <h1 id="_1"></h1>
 
 
-  <div class="doc doc-object doc-class">
+  <div class="doc doc-object doc-function">
 
 
 
-<h1 id="fileio.Pickle" class="doc doc-heading">
-        <code>Pickle</code>
-
+<h1 id="workflows.singleton" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">singleton</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span></code>
 
 
 </h1>
 
     <div class="doc doc-contents first">
 
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
 
     </div>
 
@@ -1645,7 +1624,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../externs/empty_df.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: empty_df" rel="prev">
+        <a href="sizeof_fmt.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: sizeof_fmt" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1654,26 +1633,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              empty_df
+              sizeof_fmt
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="ConfigFile.html" class="md-footer__link md-footer__link--next" aria-label="Next: ConfigFile" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              ConfigFile
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

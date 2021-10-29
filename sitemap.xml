@@ -2,297 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://josttim.github.io/pLabUtils/index.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/UX/CachedVariables.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/UX/ProgressBarImage.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/UX/sizeof_fmt.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/code_doc/mkds_make_docfiles.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/code_doc/mkds_markdown_indexfile.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/code_doc/mkds_markdownfile_content.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/code_doc/mkds_mod_mkdocs_yml_archi.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/code_doc/mkds_pyfile_parser.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/dicts/drop_matched_keys.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/dicts/keep_matched_keys.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/extern/empty_df.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/docs/mkds_make_docfiles.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/fileio/CheckConfigFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/docs/mkds_markdown_indexfile.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/docs/mkds_markdownfile_content.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/docs/mkds_mod_mkdocs_yml_archi.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/docs/mkds_pyfile_parser.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/externs/empty_df.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/fileio/ConfigFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/fileio/GetAllParamsConfigFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/fileio/GetAllSectionsConfigFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/fileio/LoadConfigFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/fileio/Pickle.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/fileio/WriteToConfigFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/fileio/paste_dir_content.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/fileio/__FilepathResolverConfigFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/Corner_detection.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/AngleWrapper.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/Distance.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/Corner_detection.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/Distances.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/Distance.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/Means.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/Distances.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/Trajectory_Window.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/Means.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/UChgtVar.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/Trajectory_Window.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/UGetAngle.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/UChgtVar.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/ULine.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/UGetAngle.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/ULineCollection.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/ULine.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/UPoint.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/ULineCollection.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/UPointCollection.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/UPoint.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/orth_change.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/UPointCollection.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/get_angle.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/orth_change.html</loc>
-         <lastmod>2021-08-26</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://josttim.github.io/pLabUtils/geometry/removenans.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/geometries/removenans.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/iters/nest_iter.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/iters/unique_pairs.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/network/OpenSQL.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/networks/StaticSQLEngine.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/network/distant_roots.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/networks/is_port_open.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/network/find_activeSQL.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/networks/open_sql.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/network/find_favoritesRootFolder.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/BinarySearch.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/network/isOpen.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/GetVersionnedPickles.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/network/local_roots.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/folder_search.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/BinarySearch.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/get_most_recent_file.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/GetMostRecentFile.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/is_or_makedir.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/GetVersionnedPickles.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/list_recursive_dirs.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/SwitchRoot.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/list_recursive_files.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/UpFolder.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/list_toplevel_dirs.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/folder_search.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/list_toplevel_files.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/is_or_makedir.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/re_folder_search.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/re_folder_search.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/remove_common_prefix.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://josttim.github.io/pLabUtils/path/remove_common_prefix.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <loc>https://josttim.github.io/pLabUtils/pathes/separate_path_components.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/pathes/switch_root.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/pathes/up_folder.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/signals/get_array_splices_infos.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/signals/removenans.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/signals/splicedArray.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/signals/splicedArrayBuilder.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/strings/alphanum_sort.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/strings/greek.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/strings/quick_regexp.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/structs/TwoLayerDict.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/structs/func_io_typematch.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/structs/get_properties_names.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://josttim.github.io/pLabUtils/structs/sdict.html</loc>
-         <lastmod>2021-08-26</lastmod>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/workflows/CachedVariables.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/workflows/ProgressBarImage.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/workflows/get_currentfile_git_repo_metadata.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/workflows/singleton.html</loc>
+         <lastmod>2021-10-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://josttim.github.io/pLabUtils/workflows/sizeof_fmt.html</loc>
+         <lastmod>2021-10-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
