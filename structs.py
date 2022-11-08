@@ -240,7 +240,8 @@ class TwoLayerDict(sdict):
             pass
 
     def __str__(self):
-        return str([ str(key) + " : "+ super(TwoLayerDict, self).get(key).__str__() for key in super(TwoLayerDict, self).keys() ])
+        return str(dict(self))
+        #return str([ str(key) + " : "+ super(TwoLayerDict, self).get(key).__str__() for key in super(TwoLayerDict, self).keys() ])
 
     def __repr__(self):
         return self.__str__()
@@ -323,4 +324,4 @@ class memarray(np.memmap):
 
 
 if __name__ == "__main__" :
-    pass
+    print(TwoLayerDict({"toast":{"test":1, "truc": 2},"fal":{"test":1, "truc": 2}}))

@@ -90,7 +90,6 @@ def dep_miss_warning(dep_placeholder):
 def dep_miss_raising(dep_placeholder):
     raise ImportError( called_dependancy_message(dep_placeholder) + str(dep_placeholder) + install_dependancy_message(dep_placeholder) )
     
-    
 class default_placeholder(ImportError):
     def __init__(self, package_name , error = "" ):
         super().__init__(error)
@@ -108,9 +107,9 @@ class sql_placeholder(default_placeholder):
         class _2objclass(object):
             class _3objclass(object):
                 pass
-            Engine = _3objclass()
-        base = _2objclass()
-    engine = _1objclass()
+            Engine = _3objclass
+        base = _2objclass
+    engine = _1objclass
     def __init__(self, package_name, error ):
         super().__init__(package_name, error)
         

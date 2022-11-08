@@ -16,13 +16,13 @@ try :
     from shapely.geometry import LineString
 except ImportError as e :
     LineString = _deps.default_placeholder("shapely",e)
-    _deps.dep_miss_warning(LineString)
+    #_deps.dep_miss_warning(LineString)
 
 try :
     import numpy as np
 except ImportError as e :
     np = _deps.default_placeholder("numpy",e)
-    _deps.dep_miss_warning(np)
+    #_deps.dep_miss_warning(np)
 
 
 # try :

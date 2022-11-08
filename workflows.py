@@ -14,11 +14,13 @@ from strings import quick_regexp
 
 import pathes
 
+
+import _dependancies as _deps
+
 try :
     import numpy as np
-except TypeError as e :
-    warnings.warn("numpy installation was not detected, some functions from workflow module will be deactivated")
-    np = e
+except ImportError as e :
+    pd = _deps.default_placeholder("numpy",e)
     
 # @dataclass
 # class Point:

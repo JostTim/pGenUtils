@@ -21,13 +21,13 @@ try :
     import sqlalchemy as sql
 except ImportError as e :          
     sql = _deps.sql_placeholder("sqlalchemy",e)
-    _deps.dep_miss_warning(sql)
+    #_deps.dep_miss_warning(sql)
     
 try :
     import pandas as pd
 except ImportError as e :
     pd = _deps.default_placeholder("pandas",e)
-    _deps.dep_miss_warning(pd)
+    #_deps.dep_miss_warning(pd)
 
 @singleton
 class StaticSQLEngine(sql.engine.base.Engine):
@@ -36,8 +36,11 @@ class StaticSQLEngine(sql.engine.base.Engine):
     This means that if this class has been called once anywhere during a python session, a reference to
     this existing instance will be returned instead of creating a new one, to save time.
     """
-    import mysql.connector.errors as mysql_cnx_errors 
-
+    
+    try :
+        import mysql.connector.errors as mysql_cnx_errors 
+    except ImportError as e :
+        mysql_cnx_errors = _deps.default_placeholder("mysql",e)
     
     class _StaticSQLEngine__routines(object):
         def __init__(self):

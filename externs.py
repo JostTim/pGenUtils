@@ -5,10 +5,12 @@ Created on Mon Aug 23 14:49:52 2021
 @author: Timothe
 """
 
+import _dependancies as _deps
+
 try :
     import pandas as pd
-except :
-    pass
+except ImportError as e :
+    pd = _deps.default_placeholder("pandas",e)
 
 def empty_df(columns, dtypes=[], index=None):
     """
