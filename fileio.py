@@ -164,55 +164,38 @@ class ConfigFile(TwoLayerDict):
         Can be used to load values with tho text indexes (two layer dictionary)
         or set values in the same way (immediately applies changes to the text file on setting variable value)
         """
-        self.path = os.path.abspath(path)
-        self.cfg = configparser.ConfigParser()
-        #self.last_mtime = None
-        self.cursor = None
         super().__init__({})
+        
+        super(dict,self).__setattr__("path", os.path.abspath(path))
+        super(dict,self).__setattr__("cfg", configparser.ConfigParser())
+        #called this way to bypass the __setattr__ overload in parent class TwoLayerDict that sets key values pair to the dict with the setattr dot syntax.
+
         if os.path.isfile(self.path):
             self._read()
         else :
             self._write()
             
-        #self._read_if_changed()
-
-    def couples(self):
-        sections = self.sections()
-        result = []
-        [ result.extend( [ ( section, param ) for param in self.params(section) ] ) for section in sections ]
-        return tuple(result)
-
-    def sections(self):
-        return self.keys()
-        #return self.cfg.sections()
-
-    def params(self,section = None):
-        return self[section].keys()
-        #return self.cfg.options(section)
-
-    #def _read_if_changed(self):
-    #    if self._filechanged :
-    #        self._read()
-            
-    
-    ### METHODS THAT WRITE TO DRIVE
-    
-    def pop(self,key, default = None):
-        retval = super().pop(key,default)
-        self._write()
-        return retval
-
-    def update(self,value):
-        super().update(value)
-        self._write()
-
-    def __setitem__(self,key,value):
-        super().__setitem__(key,value)
-        #TwoLayerDict.__setitem__(self,key,value)
-        self._write()
+    def refresh(self):
+        #fully regenerate dictionnary in ram from the values present in the file at self.path
+        self._read()
         
-    ### //END// METHODS THAT WRITE TO DRIVE   
+    def flush(self):
+        self._write()
+            
+    #def couples(self):
+    #    sections = self.sections()
+    #    result = []
+    #    [ result.extend( [ ( section, param ) for param in self.params(section) ] ) for section in sections ]
+    #    return tuple(result)
 
+    #def sections(self):
+    #    return self.keys()
+    #    return self.cfg.sections()
+
+    #def params(self,section = None):
+    #    return self[section].keys()
+    #    #return self.cfg.options(section)
+    
     def _clear_cfg(self):
         for section in self.cfg.sections():
             self.cfg.remove_section(section)
@@ -221,6 +204,11 @@ class ConfigFile(TwoLayerDict):
         for section in self.keys():
             if not section in self.cfg.sections():
                 self.cfg.add_section(section)
+
+    def _values_changed_callback(self):
+        #this method is called each time a value is changed by any means in the dictionnary
+        print("writing")
+        self._write() 
 
     def _write(self):
         """
@@ -246,8 +234,8 @@ class ConfigFile(TwoLayerDict):
         #self._write_callback()
         self._clear_cfg()
         self._create_sections()
-        for section in self.sections():
-            for param in self.params(section):
+        for section in self.keys():
+            for param in self[section].keys() :
                 value = jsonize_if_np_array(self[section,param])
                 self.cfg.set(section,param,ini_compat_json_dumps(value))
         with open(self.path, 'w') as configfile:
@@ -263,8 +251,7 @@ class ConfigFile(TwoLayerDict):
             dict.__setitem__(self, sec , {param: self._getasvar(sec,param) for param in self.cfg.options(sec) } )
         #self.last_mtime =  os.stat(self.path).st_mtime
         
-    def refresh(self):
-        self._read()
+
         
     def _getasvar(self,section,param):
         def unjsonize_if_np_array(array):
@@ -294,7 +281,7 @@ class ConfigFile(TwoLayerDict):
     
     
     def __str__(self):
-        return self.path + "\n" + super().__str__()
+        return "ConfigFile at: " + self.path + "\n" + super().__str__()
         #return str([ str(key) + " : "+
 
     #@property

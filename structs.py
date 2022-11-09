@@ -168,8 +168,99 @@ class TwoLayerDict(sdict):
             self._assert_two_layers(value)
         super().__init__(value)
 
-    @staticmethod
-    def _assert_two_layers(value):
+
+    
+    def pop(self, *args):#fisrt argument is indices (or index) second argument is default value
+        index = args[0] 
+        try :
+            outindex, inindex = self._assert_index(index)
+        except ValueError:
+            outindex, inindex = index, None
+            
+        if inindex is None :
+            c_args = ( outindex ,*args[1:])
+            default = super().pop(*c_args)
+        else  :
+            try :
+                c_args = (inindex ,*args[1:])
+                default = self[outindex].pop(*c_args)
+            except KeyError: #outindex is not in self.keys()
+                try :
+                    default =  args[1] #return default value if supplied 
+                except IndexError :
+                    raise KeyError(f"Key pair {outindex}, {inindex} not in dictionnary")
+                    
+        self._values_changed_callback()    
+        return default
+    
+    
+    def get(self,outer,inner,*args):
+        try :
+            return super().__getitem__(outer)[inner]
+        except KeyError:
+            try:
+                return args[0]#return default argument if it exists
+            except IndexError:
+                raise KeyError(f"Key pair {outer}, {inner} not in dictionnary")
+    
+    def update(self,value):
+        
+        self._assert_two_layers(value)
+        for key, val in value.items():
+            try :
+                self[key].update(val)
+            except KeyError :
+                super().__setitem__(key, val)
+        self._values_changed_callback()
+            
+    def __getitem__(self, index):
+        try :
+            outindex, inindex = self._assert_index(index)
+        except ValueError :
+            return super().__getitem__(index)#only one index supplied, return the whole second layer correspuunding to outer key
+        
+        return super().__getitem__(outindex).__getitem__(inindex)#double indexing : two keys for value access
+            
+    def __setitem__(self, index, value):
+        try :
+            outindex, inindex = self._assert_index(index)
+        except ValueError:#only one index supplied, acess the whole second layer correspuunding to outer key
+            outindex, inindex = index, None
+        
+        if inindex is None :
+            if isinstance(value,dict):
+                super().__setitem__(outindex, value)
+            else :
+                raise ValueError("Cannot assign a non dictionnary to a single key")
+        else :
+            try : 
+                self[outindex].update({inindex:value})
+            except KeyError : #if outindex is not in self.keys()
+                super().__setitem__(outindex,{inindex:value})
+            
+        self._values_changed_callback()
+        
+    def __getattr__(self,key):
+        if key in self.keys():
+            return self[key]
+        else :
+            raise KeyError(f"TwoLayerDict has no key {key} at first level")
+        
+    def __setattr__(self,key,value):
+        if not isinstance(value,dict):
+            raise TypeError("a value assigned to a section must be a dictionnary")
+                
+        if key in self.keys():
+            self[key].update(value)
+        else :
+            self[key] = value
+        self._values_changed_callback()
+
+    def _values_changed_callback(self):
+        pass #an empty callback called whenever a value changed. Cen be used in class deriving, and in particular ConfigFiles
+
+    @staticmethod 
+    def _assert_two_layers(value): #verifies that value is a valid two layer dictionnary
         if isinstance(value,TwoLayerDict):
             return True
         if not isinstance(value,dict):
@@ -179,62 +270,25 @@ class TwoLayerDict(sdict):
                 raise ValueError(f"Each value in a TwoLayerDict must have two keys, not the case for key :'{key}'")
 
     @staticmethod
-    def _assert_index(index):
+    def _assert_index(index): #verifies that the index has two separate keys. First one being outer layer and second one being inner
         if isinstance(index,(list,tuple)) or len(index) == 2:
             return index[0],index[1]
         else :
             raise ValueError("TwoLayerDict must be indexed with two keys")
-    
-    def pop(self, index, default = None):
-        try :
-            outindex, inindex = self._assert_index(index)
-        except ValueError:
-            outindex, inindex = index, None
-            
-        if inindex is None :
-            return super().pop(outindex,default)
-        else  :
-            return self[outindex].pop(inindex, default)
-    
-    def __getitem__(self, index):
-        try :
-            outindex, inindex = self._assert_index(index)
-        except ValueError :
-            return super().__getitem__(index)#only one index supplied, return normal indexing
-        
-        return super().__getitem__(outindex).__getitem__(inindex)#double indexing : two keys for value access
-            
-    def __setitem__(self, index, value):
-        outindex, inindex = self._assert_index(index)
-        
-        try : 
-            self[outindex].update({inindex:value})
-        except KeyError : #if outindex is not in self.keys()
-            super().__setitem__(outindex,{inindex:value})
-        
-    def get(self,outer,inner,default = None):
-        try :
-            return super().__getitem__(outer)[inner]
-        except KeyError:
-            return default
 
-    def update(self,value):
+    def __str__(self):
+        out = "{\n"
+        for key in self.keys():
+            out += str(key) + " : {\n"
+            for skey in self[key]:
+                out += "\t" + str(skey) + " : " + str(self[key][skey]) + ",\n"
+            out += "\t},\n"
+        out += "}"
+        return out
         
-        self._assert_two_layers(value)
-        for key, val in value.items():
-            try :
-                self[key].update(val)
-            except KeyError :
-                super().__setitem__(key, val)
-            
-            #super().update(value)
+    def __repr__(self):
+        return self.__str__()
         
-        #value = TwoLayerDict(value)
-        #for key, val in value.items():
-        #    super(sdict,self).__setitem__( key, super(sdict,self).__getitem__(key).update(val) )
-
-
-
 
 
 ################# USEFULL METHODS
