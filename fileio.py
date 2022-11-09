@@ -168,7 +168,7 @@ class ConfigFile(TwoLayerDict):
         self.cfg = configparser.ConfigParser()
         #self.last_mtime = None
         self.cursor = None
-        super(TwoLayerDict, self).__init__({})
+        super().__init__({})
         if os.path.isfile(self.path):
             self._read()
         else :
@@ -183,38 +183,43 @@ class ConfigFile(TwoLayerDict):
         return tuple(result)
 
     def sections(self):
-        return self.cfg.sections()
+        return self.keys()
+        #return self.cfg.sections()
 
     def params(self,section = None):
-        return self.cfg.options(section)
+        return self[section].keys()
+        #return self.cfg.options(section)
 
     #def _read_if_changed(self):
     #    if self._filechanged :
     #        self._read()
             
-    def pop(self,key):
-        retval = super().pop(key)
+    
+    ### METHODS THAT WRITE TO DRIVE
+    
+    def pop(self,key, default = None):
+        retval = super().pop(key,default)
         self._write()
         return retval
 
-    def __getitem__(self,index):
-        #self._read_if_changed()
-        try :
-            return super().__getitem__(index)
-        except KeyError as e:
-            raise KeyError(f"Key and section pair may not exist in the config structure. Cannot access value. Key causing the issue : {e}")
-
-    def __setitem__(self,key,value):
-        TwoLayerDict.__setitem__(self,key,value)
+    def update(self,value):
+        super().update(value)
         self._write()
 
+    def __setitem__(self,key,value):
+        super().__setitem__(key,value)
+        #TwoLayerDict.__setitem__(self,key,value)
+        self._write()
+        
+    ### //END// METHODS THAT WRITE TO DRIVE   
+
     def _clear_cfg(self):
-        for section in self.sections():
+        for section in self.cfg.sections():
             self.cfg.remove_section(section)
 
     def _create_sections(self):
         for section in self.keys():
-            if not section in self.sections():
+            if not section in self.cfg.sections():
                 self.cfg.add_section(section)
 
     def _write(self):
@@ -227,11 +232,11 @@ class ConfigFile(TwoLayerDict):
             TYPE: DESCRIPTION.
 
         """
-        def jsonize_if_np_array(array):
-            if (array.__class__.__module__, array.__class__.__name__) == ('numpy', 'ndarray'):
-                value = ["np.ndarray", array.tolist()]
-                return value
-            return array
+        def jsonize_if_np_array(value):
+            if (value.__class__.__module__, value.__class__.__name__) == ('numpy', 'ndarray'):
+                array = ["np.ndarray", value.tolist()]
+                return array
+            return value
 
         def ini_compat_json_dumps(_value):
             if isinstance(value,str):
@@ -241,10 +246,9 @@ class ConfigFile(TwoLayerDict):
         #self._write_callback()
         self._clear_cfg()
         self._create_sections()
-        for section in self.keys():
-            for param in TwoLayerDict.__getitem__(self,(section,slice(None))).keys():
-    
-                value = jsonize_if_np_array(super().__getitem__((section,param)))
+        for section in self.sections():
+            for param in self.params(section):
+                value = jsonize_if_np_array(self[section,param])
                 self.cfg.set(section,param,ini_compat_json_dumps(value))
         with open(self.path, 'w') as configfile:
             self.cfg.write(configfile)
@@ -255,15 +259,14 @@ class ConfigFile(TwoLayerDict):
     def _read(self):
         self.cfg.read(self.path)
         super().clear()
-        for sec in self.sections():
-            TwoLayerDict.__setitem__(self, sec , {param: self._getasvar(sec,param) for param in self.params(sec) } )
+        for sec in self.cfg.sections():
+            dict.__setitem__(self, sec , {param: self._getasvar(sec,param) for param in self.cfg.options(sec) } )
         #self.last_mtime =  os.stat(self.path).st_mtime
         
     def refresh(self):
         self._read()
         
     def _getasvar(self,section,param):
-
         def unjsonize_if_np_array(array):
             if isinstance(array,list):
                 if len(array) == 2 :
@@ -291,7 +294,7 @@ class ConfigFile(TwoLayerDict):
     
     
     def __str__(self):
-        return self.path + "\n" + super(TwoLayerDict,self).__str__()
+        return self.path + "\n" + super().__str__()
         #return str([ str(key) + " : "+
 
     #@property

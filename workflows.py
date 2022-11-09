@@ -280,8 +280,6 @@ class CachedVariables(ConfigFile):
             return True
         return False
 
-
-    
     def _key_resolver(self,key):
         if isinstance(key,(list,tuple)):
             return key
