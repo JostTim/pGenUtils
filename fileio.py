@@ -182,11 +182,11 @@ class ConfigFile(TwoLayerDict):
     def flush(self):
         self._write()
             
-    #def couples(self):
-    #    sections = self.sections()
-    #    result = []
-    #    [ result.extend( [ ( section, param ) for param in self.params(section) ] ) for section in sections ]
-    #    return tuple(result)
+    def couples(self):
+        sections = self.keys()
+        result = []
+        [ result.extend( [ ( section, param ) for param in self[section].keys() ] ) for section in sections ]
+        return tuple(result)
 
     #def sections(self):
     #    return self.keys()
